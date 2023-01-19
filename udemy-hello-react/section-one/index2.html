@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- REACT LIBRARY -->
+    <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <title>Let's react</title>
+</head>
+<body>
+    <!--Designated location to insert react content-->
+    <div id="app">React has not rendered yet</div>
+    <div id="paragraph">This was menat to be a paragraph</div>
+    <div id="anchor-tag">This was meant to be an anchor tag</div>
+    <div id="list">This was meant to be a list</div>
+    <!--Javascript-->
+    <script type="text/babel">
+        //Assignment - Challenge
+        //render a paragraph tag with the content "I am a paragraph"
+        ReactDOM.render(
+            <p>I am a paragraph!</p>,
+            document.getElementById("paragraph"));
+        //Render an anchor tag that links to google with the content "visit google"
+        ReactDOM.render(
+            <a href="https://www.google.es">Visit Google</a>,
+            document.getElementById("anchor-tag")
+        );
+        //Render an unordered list with three list items you need to do today
+        ReactDOM.render(
+            <ul>
+                <li>Entrega</li>
+                <li>Correo</li>
+                <li>Comprar</li>
+            </ul>,
+            document.getElementById("list")
+        );
+
+
+        //Render react to the DOM - Will accept 2 arguments: (react what, react where)
+        //where = location where you want to place it in the DOM
+        ReactDOM.render(
+            //React what - JSX
+            <h1>Hello world</h1>,
+            //React where - "app" div
+            document.getElementById("app")
+            );
+    </script>
+
+</body>
+</html>
